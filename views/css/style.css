@@ -2317,3 +2317,100 @@ span.error {
 }
 
 }
+
+
+
+.box {
+   width: 25%;
+   margin: 0 auto;
+   background: rgba(255,255,255,0);
+   padding: 25px;
+   text-align: center;
+   border:#fff 1px solid;
+   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+
+.box:hover {
+   width: 25%;
+   margin: 0 auto;
+   background: rgba(255,255,255,0.4);
+   padding: 25px;
+   text-align: center;
+   border:#fff 1px solid;
+   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+ 
+
+.button {
+  font-size: 1em;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 30px auto 20px;
+  padding: 20px 0 5px;
+  background: #ef7933;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 10px;
+  color: #fff;
+  font-size:16px;
+}
+.popup .close {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.popup .close:hover {
+  color: #fff;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 80%;
+  }
+  .popup{
+    width: 100%;
+  }
+}
+
+body.waiting * {
+  cursor: progress;
+}

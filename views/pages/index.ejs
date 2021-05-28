@@ -21,99 +21,9 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
-
-    <style>
-        .box {
-            width: 25%;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 25px;
-            text-align: center;
-        }
-
-
-        .button {
-            font-size: 1em;
-            padding: 0;
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease-out;
-        }
-
-        .button:hover {
-            background: none;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-
-        .overlay:target {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .popup {
-            margin: 70px auto;
-            padding: 20px;
-            background: #ef7933;
-            border-radius: 5px;
-            width: 50%;
-            position: relative;
-            transition: all 5s ease-in-out;
-        }
-
-        .popup h2 {
-            margin-top: 10px;
-            color: #fff;
-            font-size: 16px;
-        }
-
-        .popup .close {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            transition: all 200ms;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .popup .close:hover {
-            color: #fff;
-        }
-
-        .popup .content {
-            max-height: 30%;
-            overflow: auto;
-        }
-
-        @media screen and (max-width: 700px) {
-            .box {
-                width: 80%;
-            }
-
-            .popup {
-                width: 100%;
-            }
-        }
-    </style>
-
-
 </head>
 
 <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
-
     <nav class="unslate_co--site-mobile-menu">
         <div class="close-wrap d-flex">
             <a href="#" class="d-flex ml-auto js-menu-toggle">
@@ -438,9 +348,9 @@
                             <div class="col-md-12">
                                 <h2>Por favor, preencha os campos obrigatórios (*).</h2><br>
                                 <a class="close" href="#">&times;</a>
-                                <form action="/ebookEmail" class="form-outline-style-v1" id="contactForm" method="get">
+                                <form action="/ebookEmail" id="ebookEmail" onsubmit="return validateEbookForm();" class="form-outline-style-v1" method="post">
                                     <div class="form-group row mb-0">
-                                        
+
                                         <div class="col-lg-12 form-group">
                                             <label for="name">Nome*</label>
                                             <input name="name" type="text" class="form-control" id="name">
@@ -451,25 +361,25 @@
                                         </div>
                                         <div class="col-lg-12 form-group">
                                             <label for="empresa">Empresa</label>
-                                            <input name="empresa" type="empresa" class="form-control" id="empresa">
+                                            <input name="empresa" type="text" class="form-control" id="empresa">
                                         </div>
                                         <div class="col-lg-12 form-group">
                                             <label for="area">Área</label>
-                                            <input name="area" type="area" class="form-control" id="area">
+                                            <input name="area" type="text" class="form-control" id="area">
                                         </div>
                                         <div class="col-lg-12 form-group">
                                             <label for="cargo">Cargo</label>
-                                            <input name="cargo" type="email" class="form-control" id="cargo">
+                                            <input name="cargo" type="text" class="form-control" id="cargo">
                                         </div>
                                         <div class="col-lg-12 form-group">
                                             <label for="telefone">Telefone</label>
-                                            <input name="telefone" type="telefone" class="form-control" id="telefone">
+                                            <input name="telefone" type="text" class="form-control" id="telefone">
                                         </div>
 
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-12 text-center">
-                                            <input type="submit" style="border-color:#fff;"
+                                            <input type="submit" id="submitEbookForm" style="border-color:#fff;"
                                                 class="btn btn-outline-pill btn-custom-light mr-3" value="Enviar">
                                             <span class="submitting"></span>
                                         </div>
@@ -601,7 +511,7 @@
                     <div class="row justify-content-between">
 
                         <div class="col-md-12">
-                            <form action="/contactsEmail" class="form-outline-style-v1" id="contactForm" method="post">
+                            <form action="/contactsEmail" onsubmit="return validateContactForm();" class="form-outline-style-v1" id="contactForm" method="post">
                                 <div class="form-group row mb-0">
 
                                     <div class="col-lg-4 form-group">
@@ -624,8 +534,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 form-group">
-                                        <label for="message">Mensagem...</label>
-                                        <textarea name="message" id="message" cols="30" rows="7"
+                                        <label for="mensagem">Mensagem...</label>
+                                        <textarea name="mensagem" id="mensagem" cols="30" rows="7"
                                             class="form-control"></textarea>
                                     </div>
                                 </div>
@@ -675,7 +585,68 @@
 
     <script src="scripts/js/scripts-dist.js"></script>
     <script src="scripts/js/main.js"></script>
+    <script type="text/javascript">
+        var message = '<%= message %>';
+        if (message != '') {
+            alert(message);
+        }
 
+        var messageEbook = '<%= messageEbook %>';
+        if (messageEbook != '') {
+            alert(messageEbook);
+            window.open('files/ebook.docx');
+        }
+
+        var validateEbookForm = function(){
+            let text = ''
+            let passed = true
+            if(!document.forms["ebookEmail"]["name"].value){
+                text += "Campo nome é obrigatório.\n"
+                passed = false
+            }
+            if(!document.forms["ebookEmail"]["email"].value){
+                text += "Campo e-mail é obrigatório."
+                passed = false
+            }
+            if(!document.forms["ebookEmail"]["mensagem"].value){
+                text += "Campo mensagem é obrigatório."
+                passed = false
+            }
+            if(!passed){
+                alert(text);
+                return false
+            }else{
+                loading();
+                return true
+            }
+        }
+        var validateContactForm = function(){
+            let text = ''
+            let passed = true
+            if(!document.forms["contactForm"]["name"].value){
+                text += "Campo nome é obrigatório.\n"
+                passed = false
+            }
+            if(!document.forms["contactForm"]["email"].value){
+                text += "Campo e-mail é obrigatório."
+                passed = false
+            }
+            if(!passed){
+                alert(text);
+                return false
+            }else{
+                loading();
+                return true
+            }
+        }
+
+        var loading = function(){
+            $('body').addClass('waiting');
+            TweenMax.to('.site-loader-wrap', 1, { marginTop: 50, autoAlpha: 0, ease: Power4.easeInOut });
+            document.getElementById("submitEbookForm").disabled = true;
+            // document.getElementById("ebookEmail").submit();
+        };
+    </script>
 </body>
 
 </html>

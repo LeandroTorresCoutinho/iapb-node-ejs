@@ -11,39 +11,87 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/scripts', express.static(__dirname + '/views/'));
 app.use('/images', express.static(__dirname + '/views/images/'));
+app.use('/files', express.static(__dirname + '/views/files/'));
 app.use('/css', express.static(__dirname + '/views/css/'));
-// app.engine('html', require('ejs').renderFile);
-// app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.post('/contactsEmail', (req, res) => {
-    const { name, assunto, email, message } = req.body;
-    sendMail(name, 'leandro.torres.coutinho@gmail.com', "Contatos e dúvidas", message, email, function(err, data) {
+    const { name, assunto, email, mensagem } = req.body;
+    let html =`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset='utf-8'>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+        </head>
+        <body style="background-color: #FFFFFF;">
+            <div style="content: ''; display: table; clear: both; width: 1300px;">
+                <div style="float: left; width: 20%; ">
+                    <img src="http://iapb.center/images/logo-vertical.png"/>
+                </div>
+                <div style="float: left; width: 80%; font-size: 16px; line-height: 30px; margin-top: 50px; overflow:auto">
+                    <h1>Contatos e Dúvidas</h1>
+                    <p style="white-space: nowrap"><b>Nome:</b> ${name}</p>
+                    <p style="white-space: nowrap"><b>Assunto:</b> ${assunto}</p>
+                    <p style="white-space: nowrap"><b>E-mail:</b> ${email}</p>
+                    <p ><b>Texto:</b> ${mensagem} </p>
+                </div>
+            </div>
+            
+        </body>
+        </html>`
+    
+    sendMail(name, 'leandro.torres.coutinho@gmail.com', "Contatos e dúvidas", html, function (err, data) {
         if (err) {
-            res.status(500).json({ message: 'Internal Error' });
+            res.render('pages/index', {messageEbook:'', message: 'Desculpe estamos com problemas no servidor:' + err.message });
         } else {
-            res.status(200).json({ message: 'E-mail enviado com sucesso!' });
-            alert("Email enviado com sucesso.")
+            res.render('pages/index', {messageEbook:'', message: 'Obrigado pela colaboração. Entraremos em contato assim que possível.' });
         }
     });
 });
 
-app.get('/ebookEmail', (req, res) => {
-    const { name, assunto, email, message } = req.body;
-    res.render(path.join(__dirname, 'views', 'index'), { title: 'Meu titulo', message: 'Olá mundo!'});
-
-    // const { name, assunto, email, message } = req.body;
-    // sendMail(name, 'leandro.torres.coutinho@gmail.com', "Download Ebook", message, email, function(err, data) {
-    //     if (err) {
-    //         res.status(500).json({ message: 'Internal Error' });
-    //     } else {
-    //         res.status(200).json({ message: 'E-mail enviado com sucesso!' });
-    //         alert("Email enviado com sucesso.")
-    //     }
-    // });
+app.post('/ebookEmail', (req, res) => {
+    const { name, email, empresa, area, cargo, telefone } = req.body;
+    let html =`
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <body style="background-color: #FFFFFF;">
+        <div style="content: ''; display: table; clear: both; width: 1300px;">
+            <div style="float: left; width: 20%; ">
+                <img src="http://iapb.center/images/logo-vertical.png"/>
+            </div>
+            <div style="float: left; width: 80%; font-size: 16px; line-height: 30px; margin-top: 50px; overflow:auto">
+                <h1>Download do E-book</h1>
+                <p style="white-space: nowrap"><b>Nome:</b> ${name}</p>
+                <p style="white-space: nowrap"><b>E-mail:</b> ${email}</p>
+                <p style="white-space: nowrap"><b>Empresa:</b> ${empresa}</p>
+                <p style="white-space: nowrap"><b>Area:</b> ${area}</p>
+                <p style="white-space: nowrap"><b>Cargo:</b> ${cargo}</p>
+                <p style="white-space: nowrap"><b>Telefone:</b> ${telefone}</p>
+            </div>
+        </div>
+        
+    </body>
+    </html>`
+    sendMail(name, 'leandro.torres.coutinho@gmail.com', "Download Ebook", html, function (err, data) {
+        if (err) {
+            res.render('pages/index', {message:'', messageEbook: 'Desculpe estamos com problemas no servidor:' + err.message });
+        } else {
+            res.render('pages/index', {message:'', messageEbook: 'Cadastro feito com sucesso! O download se iniciará automaticamente.' });
+        }
+    });
+    res.render('pages/index', {message:'', messageEbook: 'Cadastro feito com sucesso! O download se iniciará automaticamente.' });
 });
 
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+app.get('/', function (req, res) {
+    var message = ''
+    res.render('pages/index', { message: '', messageEbook: '' });
 });
 
 app.listen(PORT, () => log('Server is starting on PORT,', PORT));
