@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>IAPB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="html, css, javascript, jquery">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        .box {
+            width: 25%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 25px;
+            text-align: center;
+        }
+
+
+        .button {
+            font-size: 1em;
+            padding: 0;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        .button:hover {
+            background: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #ef7933;
+            border-radius: 5px;
+            width: 50%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 10px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .popup .close:hover {
+            color: #fff;
+        }
+
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 700px) {
+            .box {
+                width: 80%;
+            }
+
+            .popup {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+        <div class="close-wrap d-flex">
+            <a href="#" class="d-flex ml-auto js-menu-toggle">
+                <span class="close-label">Close</span>
+                <div class="close-times">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                </div>
+            </a>
+        </div>
+        <div class="site-mobile-inner"></div>
+    </nav>
+
+
+    <div class="unslate_co--site-wrap">
+
+        <div class="unslate_co--site-inner">
+
+            <div class="lines-wrap">
+                <div class="lines-inner">
+                    <div class="lines"></div>
+                </div>
+            </div>
+            <!-- END lines -->
+
+            <nav class="unslate_co--site-nav site-nav-target">
+
+                <div class="container">
+
+                    <div class="row align-items-center justify-content-between text-left">
+                        <div class="col-md-6 text-left">
+                            <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                                <li class="has-children">
+                                    <a href="#home-section" class="nav-link">Home</a>
+                                    <!--<ul class="dropdown">
+                    <li>
+                      <a href="index.html">Saúde  Mental</a>
+                    </li>
+                    <li>
+                      <a href="index-video.html">Público Alvo</a>
+                    </li>
+                    <li>
+                      <a href="index-hero-slider.html">Dados Estatíticos</a>
+                    </li>
+                    <li>
+                      <a href="index-sidebar-menu.html">Download E-book</a>
+                    </li>
+					  <li>
+                      <a href="index-sidebar-menu.html">Contatos</a>
+                    </li>
+                    <li>
+                      <a href="index-right-menu.html">Right Menu</a>
+                    </li>
+                  </ul>-->
+                                </li>
+                                <li><a href="#portfolio-section" class="nav-link">Saúde Mental</a></li>
+                                <li><a class="nav-link">Produtos e Serviços</a></li>
+                                <li><a class="nav-link">Treinamentos</a></li>
+                                <!--<li><a href="#about-section" class="nav-link">Público Alvo</a></li>
+                <li><a href="#services-section" class="nav-link">Dados Estatíticos</a></li>-->
+                                <!-- <li><a href="#services-section" class="nav-link">Contatos</a></li> -->
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 text-right">
+                            <div class="site-logo pos-absolute">
+                                <a href="index.html" class="unslate_co--site-logo"><img src="images/logo-iapb.png"></a>
+                            </div>
+
+                            <div class="menu">
+                                <a href="#" class="js-menu-toggle">
+
+                                    <div class="barry">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </a>
+                                <div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            <!-- END nav -->
+
+            <div class="cover-v1 jarallax" style="background-image: url('images/cover_bg_2.jpg');" id="home-section">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-md-4 text-center"><img class="imagelogo" src="images/logo-vertical.png"></div>
+
+                        <div class="col-md-7 text-left">
+
+                            <h2 class="subheading">O <span style="color:#f17d39;font-weight:600;">IAPB</span> tem o
+                                propósito de
+                                promover amplamente a conscientização sobre a saúde mental e seus benefícios nas
+                                organizações,
+                                favorecendo o
+                                amadurecimento de ambientes psicologicamente seguros e produtivos.</h2>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <!--<a href="#portfolio-section" class="mouse-wrap smoothscroll">
+          <span class="mouse">
+            <span class="scroll"></span>
+          </span>
+          <span class="mouse-label">Scroll</span>
+        </a>-->
+            </div>
+            <!-- END .cover-v1 -->
+
+
+            <!--<div class="bgblack spco text-center"></div>-->
+
+
+            <div class="unslate_co--section bgburnout" id="portfolio-section">
+                <div class="container">
+
+
+                    <div class="relative">
+                        <div class="loader-portfolio-wrap">
+                            <div class="loader-portfolio"></div>
+                        </div>
+                    </div>
+                    <div id="portfolio-single-holder"></div>
+
+                    <div class="portfolio-wrapper">
+
+                        <div class="col-lg-4 pr-lg-5" style="min-height: 550px;"> <br><br>
+
+                            <h3 class="mb-4 heading-h5">SAÚDE MENTAL</h3>
+
+                            <p class="lead">Estado de bem-estar no qual o indivíduo é capaz de utilizar suas habilidades
+                                para lidar
+                                com as tensões normais da vida, mantendo relacionamentos saudáveis, podendo trabalhar de
+                                forma produtiva
+                                e sendo capaz de contribuir com
+                                sua comunidade.</p> <br>
+
+
+                            <!--<p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Download do E-book</a></p>-->
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+            <!-- END .counter -->
+
+
+
+            <div class="unslate_co--section bgblack" id="testimonial-section">
+                <div class="container">
+
+                    <div class="owl-carousel testimonial-slider" data-aos="fade-up">
+
+                        <div>
+
+                            <div class="testimonial-v1">
+
+                                <h3 class="mb-4 heading-h4">SÍNDROME DE BURNOUT</h3>
+                                <blockquote>
+                                    Conhecido como síndrome do esgotamento profissional, é um distúrbio emocional com
+                                    sintomas de exaustão
+                                    extrema e de esgotamento físico resultante de situações de trabalho desgastante.
+                                    Esta condição é
+                                    observada em profissionais que atuam diariamente em ambientes que demandam muita
+                                    competitividade, com
+                                    elevada pressão por maior produtividade, cumprimento de metas cada vez mais
+                                    agressivas,
+                                    responsabilidade constante e com relações conflitivas, sem permitir a liberdade de
+                                    expressão.
+                                </blockquote>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="testimonial-v1">
+
+                                <h3 class="mb-4 heading-h4">DEPRESSÃO</h3>
+                                <blockquote>
+                                    Patologia crônica e recorrente que produz uma alteração do humor caracterizada por
+                                    uma tristeza
+                                    profunda, associada a sentimentos de dor, amargura, desencanto, desesperança, baixa
+                                    autoestima e
+                                    culpa, assim como distúrbios do sono e do apetite.
+                                </blockquote>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="testimonial-v1">
+
+                                <h3 class="mb-4 heading-h4">ANSIEDADE</h3>
+                                <blockquote>
+                                    É um transtorno caracterizado pela “preocupação excessiva ou expectativa
+                                    apreensiva”, persistente e de
+                                    difícil controle, que perdura um período relativamente longo, sempre acompanhado por
+                                    no mínimo três
+                                    dos seguintes
+                                    sintomas: angústia, inquietação, fadiga, irritabilidade, batimentos cardíacos
+                                    acelerados,
+                                    dificuldade de concentração, tensão muscular e perturbação do sono.
+                                </blockquote>
+
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div class="testimonial-v1">
+                                <h3 class="mb-4 heading-h4">ESTRESSE</h3>
+                                <blockquote>
+                                    Uma reação do organismo que ocorre quando ele precisa lidar com situações que exijam
+                                    um grande esforço
+                                    emocional para serem superadas. Quanto mais a situação durar ou quanto mais grave
+                                    ela for, mais
+                                    estressada a pessoa pode ficar. O estresse provoca diversos sintomas, como: falta de
+                                    atenção, dores de
+                                    cabeça, dores musculares, fuga de relacionamentos, choro e culpa.
+                                </blockquote>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- END testimonial -->
+
+                </div>
+            </div>
+
+
+            <div class="unslate_co--section bgblack" id="portfolio-section">
+                <div class="container">
+
+                    <div id="posts" class="row">
+                        <div class="item web branding col-sm-6 col-md-3 col-lg-3">
+                            <a href="portfolio-single-1.html" class="portfolio-item ajax-load-page isotope-item"
+                                data-id="1">
+                                <div class="overlay">
+
+                                </div>
+                                <img src="images/work_1_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                            </a>
+                        </div>
+                        <div class="item branding packaging illustration col-sm-6 col-md-3 col-lg-3">
+                            <a href="portfolio-single-3.html"
+                                class="portfolio-item ajax-load-page item-portrait isotope-item" data-id="3">
+                                <div class="overlay">
+
+                                </div>
+                                <img src="images/work_2_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                            </a>
+                        </div>
+
+                        <div class="item branding packaging col-sm-6 col-md-3 col-lg-3">
+                            <a href="portfolio-single-4.html" class="portfolio-item isotope-item ajax-load-page"
+                                data-id="4">
+                                <div class="overlay">
+
+
+                                </div>
+                                <img src="images/work_3_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                            </a>
+                        </div>
+
+                        <div class="item web packaging col-sm-6 col-md-3 col-lg-3">
+
+                            <a href="images/work_4_full.jpg" class="portfolio-item isotope-item" data-fancybox="gallery"
+                                data-caption="Watch">
+                                <div class="overlay">
+                                </div>
+                                <img src="images/work_4_full.jpg" class="lazyload  img-fluid" alt="Images" />
+                            </a>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- DOWNLOAD EBOOK -->
+
+
+            <div class="unslate_co--section margemebook" id="ebook"
+                style="background-image: url('images/cover_bg_2.jpg');">
+                <div class="container">
+
+                    <div class="section-heading-wrap text-center mb-5">
+                        <h3 class="mb-4 heading-h3">Faça o Download do seu Ebook</h3>
+                        <p>Para obter o Ebook clique no link e preencha o formulário com seus dados.</p>
+                    </div>
+                    <div class="box">
+                        <a class="button" href="#popup1"><img src="images/download-ebook.png"></a>
+                    </div>
+
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <div class="col-md-12">
+                                <h2>Por favor, preencha os campos obrigatórios (*).</h2><br>
+                                <a class="close" href="#">&times;</a>
+                                <form action="/ebookEmail" class="form-outline-style-v1" id="contactForm" method="get">
+                                    <div class="form-group row mb-0">
+                                        
+                                        <div class="col-lg-12 form-group">
+                                            <label for="name">Nome*</label>
+                                            <input name="name" type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="email">Email*</label>
+                                            <input name="email" type="email" class="form-control" id="email">
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="empresa">Empresa</label>
+                                            <input name="empresa" type="empresa" class="form-control" id="empresa">
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="area">Área</label>
+                                            <input name="area" type="area" class="form-control" id="area">
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="cargo">Cargo</label>
+                                            <input name="cargo" type="email" class="form-control" id="cargo">
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="telefone">Telefone</label>
+                                            <input name="telefone" type="telefone" class="form-control" id="telefone">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12 text-center">
+                                            <input type="submit" style="border-color:#fff;"
+                                                class="btn btn-outline-pill btn-custom-light mr-3" value="Enviar">
+                                            <span class="submitting"></span>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div id="form-message-warning" class="mt-4"></div>
+                                <div id="form-message-success">
+                                    Sua mensagem foi enviada. Obrigada!
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DOWNLOAD EBOOK -->
+
+
+
+            <!--PRODUTOS E SERVIÇOS-->
+
+
+            <div class="unslate_co--section" id="services-section">
+                <div class="container">
+
+                    <div class="section-heading-wrap text-center mb-5">
+                        <h3 class="mb-4 heading-h3">Produtos e Serviços</h3>
+                        <p>Apoiamos empresas e profissionais em suas diferentes necessidades voltadas ao tema Saúde
+                            Mental. O
+                            propósito do nosso trabalho é manter e restaurar a habilidade das pessoas em lidar com as
+                            tensões do dia a
+                            dia.
+                            Nossos programas são personalizados de acordo com as necessidades dos clientes, aliando
+                            saúde mental com o
+                            desenvolvimento e crescimento sustentável dos negócios.
+                        </p>
+                    </div>
+
+                    <div class="row gutter-v3">
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+
+                                <h3>Melhoria</h3>
+                                <p>dos Indicadores de Performance do Negócio e do Clima;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+
+                                <h3>Redução do Absenteísmo,</h3>
+                                <p>Despesas com Afastamento e Custos Trabalhistas; </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Redução de Indicadores</h3>
+                                <p>de Acidentes e Incidentes;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+
+                                <h3>Redução da Procrastinação,</h3>
+                                <p>Ineficácia e Ineficiência (Presenteísmo);</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+
+                                <h3>Colaboradores</h3>
+                                <p>mais Engajados e com mais Bem-Estar;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Ambientes Produtivos,</h3>
+                                <p>Harmônicos, Integrados e Colaborativos; </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Gestão Eficaz</h3>
+                                <p>do Trabalho Remoto;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Reorganização</h3>
+                                <p>de Rotinas de Trabalho e Sugestão de Revisão de Processos;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Trilha de Treinamentos</h3>
+                                <p>Personalizados para Colaboradores e Líderes;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 mb-3">
+                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                                <h3>Treinamentos e Mentorias</h3>
+                                <p>em Saúde Mental para Organizações.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIM PRODUTOS E SERVIÇOS -->
+
+            <div class="unslate_co--section bglaranja" id="contact-section">
+                <div class="container">
+                    <div class="section-heading-wrap text-center mb-5">
+                        <h2 class="heading-h2 text-center divider">CONTATOS E DÚVIDAS</h2>
+                    </div>
+
+
+                    <div class="row justify-content-between">
+
+                        <div class="col-md-12">
+                            <form action="/contactsEmail" class="form-outline-style-v1" id="contactForm" method="post">
+                                <div class="form-group row mb-0">
+
+                                    <div class="col-lg-4 form-group">
+                                        <label for="name">Nome</label>
+                                        <input name="name" type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="col-lg-4 form-group">
+                                        <label for="email">Email</label>
+                                        <input name="email" type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="col-lg-4 form-group">
+                                        <div class="select">
+                                            <select name="assunto" id="standard-select">
+                                                <option value="">Assunto</option>
+                                                <option value="treinamento">Treinamento</option>
+                                                <option value="mentoria">Mentoria</option>
+                                                <option value="consultoria">Consultoria</option>
+                                                <option value="outros">Outros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 form-group">
+                                        <label for="message">Mensagem...</label>
+                                        <textarea name="message" id="message" cols="30" rows="7"
+                                            class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12 text-center">
+                                        <input type="submit" style="border-color:#fff;"
+                                            class="btn btn-outline-pill btn-custom-light mr-3" value="Enviar Mensagem">
+                                        <span class="submitting"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="form-message-warning" class="mt-4"></div>
+                            <div id="form-message-success">
+                                Sua mensagem foi enviada. Obrigada!
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END .unslate_co-site-inner -->
+
+        <footer class="unslate_co--footer unslate_co--section bgblack">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+
+                        <div class="footer-site-logo"><img src="images/logo-iapb-cor.png"></a></div>
+
+                        <p style="margin:-20px 0 20px 0;"><a>saudemental@iapb.center</a></p>
+
+                        <ul class="footer-site-social">
+                            <li><a href="https://www.instagram.com/iapbsaudemental/">Instagram</a></li>
+                            <!-- <li><a href="#">LinkedIn</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+        <div class="site-loader"></div>
+    </div>
+
+    <script src="scripts/js/scripts-dist.js"></script>
+    <script src="scripts/js/main.js"></script>
+
+</body>
+
+</html>
