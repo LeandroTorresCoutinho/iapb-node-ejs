@@ -118,7 +118,9 @@ a, a:hover {
 
 .form-group input{background:#ef7933!important;}
 
-
+.bulet{display:block; float:left;margin-right:8px; margin-bottom:70px; margin-top:3px;}
+.bulet::after{content:''; display:block; clear:left;}
+.bulet img{padding:0 20px 0 0;}
 
 @media (max-width: 991.98px) {
   .unslate_co--site-inner {
@@ -1370,6 +1372,9 @@ figure.dotted-bg:before {
   margin-right: -15px !important;
   margin-left: -15px !important;
 }
+.feature-v1 p{
+  margin-bottom: 30px;
+}
 
 @media (max-width: 991.98px) {
   .gutter-isotope-item {
@@ -1383,6 +1388,7 @@ figure.dotted-bg:before {
   padding-right: 15px !important;
   padding-left: 15px !important;
 }
+
 
 @media (max-width: 991.98px) {
   .gutter-isotope-item > .col,
@@ -1911,6 +1917,7 @@ select option {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .unslate_co--footer .footer-site-social li a:hover, .unslate_co--footer .footer-site-social li a:focus {
@@ -2326,31 +2333,34 @@ span.error {
    background: rgba(255,255,255,0);
    padding: 25px;
    text-align: center;
-   border:#fff 1px solid;
-   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+   border:none;
+   box-shadow: rgba(100, 100, 111, 0) 0px 7px 29px 0px;
 }
 
 .box:hover {
    width: 25%;
    margin: 0 auto;
-   background: rgba(255,255,255,0.4);
+   background: rgba(255,255,255,0);
    padding: 25px;
    text-align: center;
-   border:#fff 1px solid;
-   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+   border:none;
+   box-shadow: rgba(100, 100, 111, 0) 0px 7px 29px 0px;
 }
  
 
 .button {
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: -0.6px;
   padding: 0;
-  color: #fff;
+  color: #0e0601;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 .button:hover {
   background: none;
+  color:#fc8f02!important;
 }
 
 .overlay {
@@ -2411,6 +2421,6 @@ span.error {
   }
 }
 
-body.waiting * {
-  cursor: progress;
+.bold{
+  font-weight: bold!important;
 }

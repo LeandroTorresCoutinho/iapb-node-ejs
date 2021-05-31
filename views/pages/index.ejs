@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="html, css, javascript, jquery">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" />
 
     <link rel="stylesheet" href="css/vendor/icomoon/style.css">
     <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
@@ -54,37 +55,16 @@
                 <div class="container">
 
                     <div class="row align-items-center justify-content-between text-left">
-                        <div class="col-md-6 text-left">
+                        <div class="col-md-8 text-left">
                             <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
                                 <li class="has-children">
                                     <a href="#home-section" class="nav-link">Home</a>
-                                    <!--<ul class="dropdown">
-                    <li>
-                      <a href="index.html">Saúde  Mental</a>
-                    </li>
-                    <li>
-                      <a href="index-video.html">Público Alvo</a>
-                    </li>
-                    <li>
-                      <a href="index-hero-slider.html">Dados Estatíticos</a>
-                    </li>
-                    <li>
-                      <a href="index-sidebar-menu.html">Download E-book</a>
-                    </li>
-					  <li>
-                      <a href="index-sidebar-menu.html">Contatos</a>
-                    </li>
-                    <li>
-                      <a href="index-right-menu.html">Right Menu</a>
-                    </li>
-                  </ul>-->
                                 </li>
                                 <li><a href="#portfolio-section" class="nav-link">Saúde Mental</a></li>
-                                <li><a class="nav-link">Produtos e Serviços</a></li>
-                                <li><a class="nav-link">Treinamentos</a></li>
-                                <!--<li><a href="#about-section" class="nav-link">Público Alvo</a></li>
-                <li><a href="#services-section" class="nav-link">Dados Estatíticos</a></li>-->
-                                <!-- <li><a href="#services-section" class="nav-link">Contatos</a></li> -->
+                                <li><a href="#ebook">Download E-book</a></li>
+                                <li><a href="#services-section" class="nav-link">Produtos e Serviços</a></li>
+                                <li><a href="#training-section" class="nav-link">Treinamentos</a></li>
+                                <li><a href="#contact-section" class="nav-link">Contatos e Dúvidas</a></li>
                             </ul>
                         </div>
 
@@ -336,11 +316,11 @@
                 <div class="container">
 
                     <div class="section-heading-wrap text-center mb-5">
-                        <h3 class="mb-4 heading-h3">Faça o Download do seu Ebook</h3>
-                        <p>Para obter o Ebook clique no link e preencha o formulário com seus dados.</p>
+                        <h3 class="mb-4 heading-h3">Quer saber mais sobre saúde mental?</h3>
+                        <p>Faça aqui o download do nosso E-Book! Clique no link abaixo, preencha o formulário com seus dados e o download se iniciará automaticamente.</p>
                     </div>
                     <div class="box">
-                        <a class="button" href="#popup1"><img src="images/download-ebook.png"></a>
+                        <a class="button" href="#popup1"><img src="images/download-ebook.png"><br>Clique aqui para fazer o Download do E-book</a>
                     </div>
 
                     <div id="popup1" class="overlay">
@@ -348,7 +328,8 @@
                             <div class="col-md-12">
                                 <h2>Por favor, preencha os campos obrigatórios (*).</h2><br>
                                 <a class="close" href="#">&times;</a>
-                                <form action="/ebookEmail" id="ebookEmail" onsubmit="return validateEbookForm();" class="form-outline-style-v1" method="post">
+                                <form action="/ebookEmail" id="ebookEmail" onsubmit="return validateEbookForm();"
+                                    class="form-outline-style-v1" method="post">
                                     <div class="form-group row mb-0">
 
                                         <div class="col-lg-12 form-group">
@@ -405,101 +386,173 @@
             <!--PRODUTOS E SERVIÇOS-->
 
 
-            <div class="unslate_co--section" id="services-section">
-                <div class="container">
+      <div class="unslate_co--section" id="services-section">
+        <div class="container">
 
+          <div class="section-heading-wrap text-center mb-5">
+            <h3 class="mb-4 heading-h3">Produtos e Serviços</h3>
+            <p>Apoiamos empresas e profissionais em suas diferentes necessidades voltadas ao tema Saúde Mental. O
+              propósito do nosso trabalho é manter e restaurar a habilidade das pessoas em lidar com as tensões do dia a
+              dia.
+              Nossos programas são personalizados de acordo com as necessidades dos clientes, aliando saúde mental com o
+              desenvolvimento e crescimento sustentável dos negócios.
+            </p>
+          </div>
+
+          <div class="row gutter-v3">
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+
+                <h3>Melhoria</h3>
+                <p>dos Indicadores de Performance do Negócio e do Clima</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+
+                <h3>Redução do Absenteísmo</h3>
+                <p>Despesas com Afastamento e Custos Trabalhistas</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Redução de Indicadores</h3>
+                <p>de Acidentes e Incidentes</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+
+                <h3>Redução da Procrastinação</h3>
+                <p>Ineficácia e Ineficiência (Presenteísmo)</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+
+                <h3>Colaboradores</h3>
+                <p>mais Engajados e com mais Bem-Estar</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Ambientes Produtivos</h3>
+                <p>Harmônicos, Integrados e Colaborativos</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Gestão Eficaz</h3>
+                <p>do Trabalho Remoto</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Reorganização</h3>
+                <p>de Rotinas de Trabalho e Sugestão de Revisão de Processos</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Trilha de Treinamentos</h3>
+                <p>Personalizados para Colaboradores e Líderes</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+
+                <h3>Treinamentos e Mentorias</h3>
+                <p>em Saúde Mental para Organizações</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- FIM PRODUTOS E SERVIÇOS -->
+            <!--TREINAMENTOS -->
+
+
+            <div class="unslate_co--section" id="training-section">
+                <div class="container">
                     <div class="section-heading-wrap text-center mb-5">
-                        <h3 class="mb-4 heading-h3">Produtos e Serviços</h3>
-                        <p>Apoiamos empresas e profissionais em suas diferentes necessidades voltadas ao tema Saúde
-                            Mental. O
-                            propósito do nosso trabalho é manter e restaurar a habilidade das pessoas em lidar com as
-                            tensões do dia a
-                            dia.
-                            Nossos programas são personalizados de acordo com as necessidades dos clientes, aliando
-                            saúde mental com o
-                            desenvolvimento e crescimento sustentável dos negócios.
+                        <h3 class="mb-4 heading-h3">Treinamentos</h3>
+                        <p>O IAPB oferece uma série de treinamentos visando promover a saúde mental nas organizações,
+                            restaurando a
+                            habilidade das pessoas em lidar com as tensões do dia a dia, e criando um ambiente
+                            harmônico, com maior
+                            produtividade, integração e colaboração, garantindo assim melhor desempenho da sua empresa.
+                            Conheça alguns
+                            dos nossos treinamentos:
                         </p>
                     </div>
 
                     <div class="row gutter-v3">
-                        <div class="col-md-3 col-lg-3 mb-3">
+                        <div class="col-md-12 col-lg-12 mb-12">
                             <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-
-                                <h3>Melhoria</h3>
-                                <p>dos Indicadores de Performance do Negócio e do Clima;</p>
+                                <p><img class="bulet" src="images/bulet.png"><b class="bold">Estruturação de Programa de Saúde Mental
+                                    nas Organizações:</b>
+                                    hoje temos bastante informação sobre saúde mental e muitas empresas já vinham
+                                    desenvolvendo projetos
+                                    de bem-estar para os seus colaboradores, mas como estruturar um programa completo de
+                                    saúde mental que
+                                    traga os resultados de produtividade e performance do negócio que você espera? Como
+                                    diagnosticar?
+                                    Quais protocolos implementar e como prevenir? Quer saber mais? <a href="#ebook">Baixe o e-book</a> ou <a href="#contact-section">entre em contato conosco!</a></p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
+                        <div class="col-md-12 col-lg-12 mb-12">
                             <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-
-                                <h3>Redução do Absenteísmo,</h3>
-                                <p>Despesas com Afastamento e Custos Trabalhistas; </p>
+                                <p><img class="bulet" src="images/bulet.png"><b class="bold">Inteligência Emocional para líderes:</b> a
+                                    Inteligência
+                                    Emocional se mostra cada vez mais relevante nesse cenário de mudanças principalmente
+                                    para os líderes.
+                                    Você conhece as soft skills que se busca numa liderança produtiva? Sabe como
+                                    desenvolvê-las? Quer saber mais? <a href="#ebook">Baixe o e-book</a> ou <a href="#contact-section">entre em contato conosco!</a></p></p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
+                        <div class="col-md-12 col-lg-12 mb-12">
                             <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-
-                                <h3>Redução de Indicadores</h3>
-                                <p>de Acidentes e Incidentes;</p>
+                                <p><img class="bulet" src="images/bulet.png"><b class="bold">Gerenciamento de trabalho remoto:</b> o
+                                    trabalho remoto é
+                                    apontado pelas consultorias como uma forte tendência do mercado, ou seja, veio pra
+                                    ficar. Mas como
+                                    fazer gestão do trabalho remoto promovendo a produtividade e a saúde mental do seu
+                                    colaborador num
+                                    ambiente muitas vezes conturbado, em que ele divide com o(a) companheiro(a), filhos
+                                    e o cachorro?
+                                    Quer saber mais? <a href="#ebook">Baixe o e-book</a> ou <a href="#contact-section">entre em contato conosco!</a></p></p>
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-lg-3 mb-3">
+                        <div class="col-md-12 col-lg-12 mb-12">
                             <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-
-                                <h3>Redução da Procrastinação,</h3>
-                                <p>Ineficácia e Ineficiência (Presenteísmo);</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-
-                                <h3>Colaboradores</h3>
-                                <p>mais Engajados e com mais Bem-Estar;</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-
-                                <h3>Ambientes Produtivos,</h3>
-                                <p>Harmônicos, Integrados e Colaborativos; </p>
+                                <p><img class="bulet" src="images/bulet.png"><b class="bold">Desenvolvimento da Resiliência:</b> a
+                                    resiliência nos permite
+                                    aprender a suportar melhor a pressão, encontrar uma solução para as situações
+                                    vividas e depois voltar
+                                    ao nosso estado normal tendo assimilado as lições aprendidas. É uma habilidade
+                                    indispensável que nos
+                                    ajuda a lidar com a Ansiedade, com o Estresse e com a Síndrome de Burnout. Mas como
+                                    desenvolver essa
+                                    habilidade nos seus colaboradores? Quer saber mais? <a href="#ebook">Baixe o e-book</a> ou <a href="#contact-section">entre em contato conosco!</a></p></p>
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
 
-                                <h3>Gestão Eficaz</h3>
-                                <p>do Trabalho Remoto;</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
 
-                                <h3>Reorganização</h3>
-                                <p>de Rotinas de Trabalho e Sugestão de Revisão de Processos;</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-
-                                <h3>Trilha de Treinamentos</h3>
-                                <p>Personalizados para Colaboradores e Líderes;</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-3 mb-3">
-                            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-
-                                <h3>Treinamentos e Mentorias</h3>
-                                <p>em Saúde Mental para Organizações.</p>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
             </div>
-
-            <!-- FIM PRODUTOS E SERVIÇOS -->
 
             <div class="unslate_co--section bglaranja" id="contact-section">
                 <div class="container">
@@ -511,7 +564,8 @@
                     <div class="row justify-content-between">
 
                         <div class="col-md-12">
-                            <form action="/contactsEmail" onsubmit="return validateContactForm();" class="form-outline-style-v1" id="contactForm" method="post">
+                            <form action="/contactsEmail" onsubmit="return validateContactForm();"
+                                class="form-outline-style-v1" id="contactForm" method="post">
                                 <div class="form-group row mb-0">
 
                                     <div class="col-lg-4 form-group">
@@ -556,7 +610,10 @@
                     </div>
                 </div>
             </div>
+
+
         </div> <!-- END .unslate_co-site-inner -->
+
 
         <footer class="unslate_co--footer unslate_co--section bgblack">
             <div class="container">
@@ -568,8 +625,10 @@
                         <p style="margin:-20px 0 20px 0;"><a>saudemental@iapb.center</a></p>
 
                         <ul class="footer-site-social">
-                            <li><a href="https://www.instagram.com/iapbsaudemental/">Instagram</a></li>
-                            <!-- <li><a href="#">LinkedIn</a></li> -->
+                            <li><a onclick="openInstagranNewTab()">Instagram</a></li>
+                            <li><a onclick="openBlogNewTab()">Blog</a></li>
+                            <li><a onclick="openFacebookNewTab()">Facebook</a></li>
+                            <li><a onclick="openLinkedInNewTab()">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>
@@ -597,55 +656,72 @@
             window.open('files/ebook.docx');
         }
 
-        var validateEbookForm = function(){
+        var validateEbookForm = function () {
             let text = ''
             let passed = true
-            if(!document.forms["ebookEmail"]["name"].value){
+            if (!document.forms["ebookEmail"]["name"].value) {
                 text += "Campo nome é obrigatório.\n"
                 passed = false
             }
-            if(!document.forms["ebookEmail"]["email"].value){
+            if (!document.forms["ebookEmail"]["email"].value) {
                 text += "Campo e-mail é obrigatório."
                 passed = false
             }
-            if(!document.forms["ebookEmail"]["mensagem"].value){
+            if (!document.forms["ebookEmail"]["mensagem"].value) {
                 text += "Campo mensagem é obrigatório."
                 passed = false
             }
-            if(!passed){
+            if (!passed) {
                 alert(text);
                 return false
-            }else{
+            } else {
                 loading();
                 return true
             }
         }
-        var validateContactForm = function(){
+        var validateContactForm = function () {
             let text = ''
             let passed = true
-            if(!document.forms["contactForm"]["name"].value){
+            if (!document.forms["contactForm"]["name"].value) {
                 text += "Campo nome é obrigatório.\n"
                 passed = false
             }
-            if(!document.forms["contactForm"]["email"].value){
+            if (!document.forms["contactForm"]["email"].value) {
                 text += "Campo e-mail é obrigatório."
                 passed = false
             }
-            if(!passed){
+            if (!passed) {
                 alert(text);
                 return false
-            }else{
+            } else {
                 loading();
                 return true
             }
         }
 
-        var loading = function(){
+        var loading = function () {
             $('body').addClass('waiting');
             TweenMax.to('.site-loader-wrap', 1, { marginTop: 50, autoAlpha: 0, ease: Power4.easeInOut });
             document.getElementById("submitEbookForm").disabled = true;
             // document.getElementById("ebookEmail").submit();
         };
+
+        var openInstagranNewTab = function (){
+            window.open("https://www.instagram.com/iapbsaudemental/")
+        }
+
+        var openFacebookNewTab = function (){
+            window.open("https://www.facebook.com/IAPB-Sa%C3%BAde-Mental-104680691750553")
+        }
+
+        var openLinkedInNewTab = function (){
+            // window.open("https://www.linkedin.com")
+        }
+
+        var openBlogNewTab = function (){
+            window.open("https://www.blog.iapb.center/")
+        }
+
     </script>
 </body>
 

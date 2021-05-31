@@ -41,7 +41,7 @@ app.post('/contactsEmail', (req, res) => {
         </body>
         </html>`
     
-    sendMail(name, 'leandro.torres.coutinho@gmail.com', "Contatos e dúvidas", html, function (err, data) {
+    sendMail(name, 'saudemental@iapb.center', "Contatos e dúvidas", html, function (err, data) {
         if (err) {
             res.render('pages/index', {messageEbook:'', message: 'Desculpe estamos com problemas no servidor:' + err.message });
         } else {
@@ -78,7 +78,7 @@ app.post('/ebookEmail', (req, res) => {
         
     </body>
     </html>`
-    sendMail(name, 'leandro.torres.coutinho@gmail.com', "Download Ebook", html, function (err, data) {
+    sendMail(name, 'saudemental@iapb.center', "Download Ebook", html, function (err, data) {
         if (err) {
             res.render('pages/index', {message:'', messageEbook: 'Desculpe estamos com problemas no servidor:' + err.message });
         } else {
