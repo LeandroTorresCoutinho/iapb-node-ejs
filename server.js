@@ -45,7 +45,7 @@ app.post('/contactsEmail', (req, res) => {
         if (err) {
             res.render('pages/index', {messageEbook:'', message: 'Desculpe estamos com problemas no servidor:' + err.message });
         } else {
-            res.render('pages/index', {messageEbook:'', message: 'Obrigado pela colaboração. Entraremos em contato assim que possível.' });
+            res.render('pages/index', {messageEbook:'', message: 'Obrigado pelo contato. Entraremos em contato assim que possível.' });
         }
     });
 });

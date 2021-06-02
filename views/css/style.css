@@ -81,6 +81,7 @@ a, a:hover {
 
 .bglaranja {background:#ef7933;}
 
+.bgcinza{background:#f9f8f7; margin-top:30px;}
 
 .bgburnout {
   display: block;
@@ -590,12 +591,12 @@ a, a:hover {
   background: #fff;
 }
 
-.unslate_co--site-nav.scrolled.awake {
+/* .unslate_co--site-nav.scrolled.awake {
   margin-top: 0px;
   -webkit-transition: .3s all ease-out;
   -o-transition: .3s all ease-out;
   transition: .3s all ease-out;
-}
+} */
 
 .unslate_co--site-nav.scrolled.sleep {
   -webkit-transition: .3s all ease-out;
@@ -2328,7 +2329,7 @@ span.error {
 
 
 .box {
-   width: 25%;
+   width: 26%;
    margin: 0 auto;
    background: rgba(255,255,255,0);
    padding: 25px;
@@ -2338,7 +2339,7 @@ span.error {
 }
 
 .box:hover {
-   width: 25%;
+   width: 26%;
    margin: 0 auto;
    background: rgba(255,255,255,0);
    padding: 25px;
@@ -2377,6 +2378,11 @@ span.error {
 .overlay:target {
   visibility: visible;
   opacity: 1;
+  overflow: scroll;
+}
+
+.overflow-hidden{
+  overflow: hidden!important;
 }
 
 .popup {
@@ -2423,4 +2429,16 @@ span.error {
 
 .bold{
   font-weight: bold!important;
+}
+
+.margin-bottom{
+  margin-bottom: 7em!important;  
+}
+
+.label-aceite{
+  padding-left: 20px;
+}
+
+.check-aceite{
+  margin-top: 13px;
 }
