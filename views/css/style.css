@@ -61,6 +61,9 @@ a, a:hover {
   text-decoration: none !important;
 }
 
+.nav-link{
+  cursor: pointer;
+}
 .unslate_co--site-inner {
   margin-bottom: 400px;
   position: relative;
@@ -2441,4 +2444,72 @@ span.error {
 
 .check-aceite{
   margin-top: 13px;
+}
+
+
+.social-menu {
+	display:inline-block;
+	list-style-type: none;
+	padding:0;
+	text-align:center;
+}
+.social-menu li {
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+.social-menu i {
+	color: #191919;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 25px;
+	margin-right: 10px;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+}
+.social-menu i:hover {
+	color: #000;
+}
+
+.social-menu i:before {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.social-menu a {
+	text-decoration: none;
+}
+
+.fa-facebook {
+	background:#ef7933;
+} 
+
+.fa-linkedin {
+	background:#ef7933;
+}
+
+.fa-twitter {
+	background:#ef7933;
+}
+
+.fa-instagram {
+	background:#ef7933;
+}
+
+.fa-youtube {
+	background:#ef7933;
+}
+.fa-blogger {
+	background:#ef7933;
+}
+.fa-wordpress {
+	background:#ef7933;
+}
+
+.social-menu i:hover {
+	opacity: .7;
+	border-radius: 0;
 }
